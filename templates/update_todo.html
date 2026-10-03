@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF=8">
+        <title>home page</title>
+        </head>
+        <body>
+            <form method="post">
+                {% csrf_token %}
+                Title:<input type="text" name="title" value="{{todo.title}}">
+                Content:<input type="text" name="content" value="{{todo.content}}">
+                <input type="submit" value="Edit">
+            </form>
+        </body>
+    </html>

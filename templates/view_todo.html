@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Views</h1>
+{% for i in data %}
+<ul>
+    <li>Title : {{i.title}}</li>
+    <li>Content : {{i.content}}</li>
+    <a href="{% url 'todo_update' i.id %}">Update</a>
+    <a href="{% url 'todo_delete' i.id %}">Delete</a>
+</ul>
+{% endfor %}
+</body>
+</html>
